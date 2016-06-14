@@ -12,6 +12,8 @@ function start () {
   two();
 
   three();
+
+  four();
 }
 
 function one () {
@@ -46,6 +48,14 @@ function three() {
 }
 
 // CREATE FUNCTION four HERE
+function four() {
+  // getting the element
+  var four = document.getElementById('four');
+  // adding event to the element
+  four.addEventListener('click', makeSkyBlue);
+  // adding second event to the element
+  four.addEventListener('mouseleave', makeWhite);
+}
 
 // Changes the background color of event's target
 function makeBlue (evt) {
@@ -57,7 +67,11 @@ function makeGreen (evt) {
 }
 
 function makeOrange (evt) {
-  evt.target.style.backgroundColor = '#FF4500';
+  evt.target.style.backgroundColor = 'orange';
+}
+
+function makeSkyBlue  (evt) {
+  evt.target.style.backgroundColor = '#87CEEB';
 }
 
 function makeWhite (evt) {
